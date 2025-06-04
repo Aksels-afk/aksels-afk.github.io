@@ -6,52 +6,226 @@
     <title>Mana Digitālā Pieredze LU</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="light-mode">
-    <nav>
+    <nav role="navigation" aria-label="Galvenā navigācija">
         <div class="nav-container">
-            <div class="nav-links">
-                <a href="#mans-cels">Mans ceļš līdz LU</a>
-                <a href="#platformas">Universitātes tiešsaistes platformas</a>
-                <a href="#digitalie-rikji">Digitālie rīki</a>
-                <a href="#iespejas">Iespējas</a>
+            <div class="nav-left">
+                <a href="https://aksels-afk.github.io" class="site-link" aria-label="Sākumlapa">aksels-afk.github.io</a>
             </div>
-            <button id="theme-toggle" class="theme-toggle">
-                <span class="moon">🌙</span>
-                <span class="sun">☀️</span>
-            </button>
+            <div class="nav-right">
+                <button class="mobile-menu-toggle" aria-label="Atvērt izvēlni" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <div class="nav-links" role="menu">
+                    <a href="#mans-cels" role="menuitem">Mans ceļš līdz LU</a>
+                    <a href="#platformas" role="menuitem">Universitātes tiešsaistes platformas</a>
+                    <a href="#digitalie-rikji" role="menuitem">Digitālie rīki</a>
+                    <a href="#iespejas" role="menuitem">Iespējas</a>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Mainīt tēmu">
+                    <span class="moon" aria-hidden="true">🌙</span>
+                    <span class="sun" aria-hidden="true">☀️</span>
+                </button>
+            </div>
         </div>
     </nav>
 
     <main>
-        <section id="mans-cels" class="section">
-            <h2>Mans ceļš līdz LU</h2>
+        <section id="mans-cels" class="section" aria-labelledby="mans-cels-heading">
+            <div class="section-header">
+                <h2 id="mans-cels-heading">Mans ceļš līdz LU</h2>
+                <span class="arrow" aria-hidden="true">▼</span>
+            </div>
             <div class="content">
-                <p>Šeit es pastāstu par savu ikdienas braucienu, kādus transportus izvēlos un savas domas.</p>
+                <p>Ikdienas brauciens uz Latvijas Universitāti ir no Brīvības gatves 224, kur atrodas mana darba vieta, līdz LU centrālajai ēkai Raiņa bulvārī. Šis ceļš ir kļuvis par daļu no manas ikdienas rutīnas, un laikam ejot, esmu izstrādājis sev efektīvu plānu.</p>
+                
+                <div class="image-container">
+                    <img src="PaCelamUzLU.jpeg" alt="Ceļš uz LU" class="journey-image" onclick="openFullscreen(this)">
+                    <p>Bildē redzama Brīvības Gatve, pie darba vietas, no kuras eju uz transporta pieturu, lai nokļūtu LU.</p>
+                </div>
+
+                <p>Parasti izvēlos braukt ar sabiedrisko transportu, jo tas ir gan ekonomiski izdevīgāk, gan videi draudzīgāk. Visbiežāk izmantoju tramvaju vai trolejbusu, atkarībā no laika un transporta kustības grafika. Google Maps palīdz izvēlēties ātrāko maršrutu, ņemot vērā reāllaika transporta kustību un iespējamās kavēšanās.</p>
+
+                <p>Pirms katra brauciena pārbaudu laika prognozi, lai saprastu, kādus laikapstākļus varu sagaidīt un atbilstoši sagatavoties. Tas ir īpaši svarīgi ziemas mēnešos, kad sniegs un ledus var būtiski ietekmēt transporta kustību un brauciena ilgumu.</p>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d17401.94047425568!2d24.120274294574138!3d56.961777455075215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x46eece50ec65fcf1%3A0x6aa060670441bae7!2zQnLEq3bEq2JhcyBnYXQuIDIyNCwgVmlkemVtZXMgcHJpZWvFoXBpbHPEk3RhLCBSxKtnYSwgTFYtMTAzOQ!3m2!1d56.972175699999994!2d24.164210699999998!4m5!1s0x46eecfd3cdaa69c7%3A0x16a2b44d483ec349!2sUniversity%20of%20Latvia%2C%20Rai%C5%86a%20bulv%C4%81ris%2019%2C%20Centra%20rajons%2C%20R%C4%ABga%2C%20LV-1586%2C%20Latvia!3m2!1d56.950809799999995!2d24.1163132!5e0!3m2!1slv!2slv!4v1749050429136!5m2!1slv!2slv" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p>Brauciena laikā es bieži izmantoju laiku produktīvi - pārskatu lekciju materiālus, pārbaudu e-pastus vai klausos lekciju ierakstus. Šis laiks ir kļuvis par vērtīgu iespēju papildināt savas zināšanas un sagatavoties lekcijām, kontroldarbiem vai eksāmeniem.</p>
+
+                <p>Kad esmu nonācis LU, parasti atliek vēl dažas minūtes, lai nokļūtu līdz konkrētajai auditorijai. Šajās minūtes satiekos ar kursabiedriem, lai apspriestu uzdevumus vai vienkārši paelpotu svaigu gaisu pirms lekcijām.</p>
+            
+                <p>Nākošajās sadaļās pastāstu kādus rīkus es izmantoju, lai padarītu savu ikdienu patīkamāku un lietderīgāku.</p>
             </div>
         </section>
 
         <section id="platformas" class="section">
-            <h2>Universitātes tiešsaistes platformas</h2>
+            <div class="section-header">
+                <h2>Universitātes tiešsaistes platformas</h2>
+                <span class="arrow">▲</span>
+            </div>
             <div class="content">
-                <p>Šeit redzamas sistēmas, kuras lietoju ikdienā, studējot Latvijas Universitātē. Aprakstu e-studijas, LUIS sistēmu un citas noderīgas saites.</p>
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <h3>E-studijas</h3>
+                        <p>LU e-studiju platforma ir galvenais rīks mācību procesa organizēšanai. Šeit var atrast:</p>
+                        <ul>
+                            <li>Mācību materiālus un lekciju prezentācijas, materiālus var izmantot kā papildus informāciju un palīdzību</li>
+                            <li>Uzdevumus un to iesniegšanas datumus</li>
+                            <li>Pārbaudes darbus un testus</li>
+                            <li>Diskusiju forumus ar pasniedzējiem un kursabiedriem, parasti tos izmanto paziņojumiem</li>
+                        </ul>
+                        <a href="https://estudijas.lu.lv" target="_blank" class="platform-link">Apmeklēt e-studijas →</a>
+                    </div>
+
+                    <div class="platform-card">
+                        <h3>LUIS</h3>
+                        <p>LUIS (Latvijas Universitātes Informācijas Sistēma) ir sistēma, ar kuras palīdzību var redzēt:</p>
+                        <ul>
+                            <li>Studiju programmu un kursu reģistrāciju</li>
+                            <li>Eksāmenu grafiku un rezultātus</li>
+                            <li>Akadēmisko kredītpunktu uzskaiti</li>
+                            <li>Studiju aptaujas</li>
+                            <li>Personīgo informāciju un dokumentu pārvaldību</li>
+                        </ul>
+                        <a href="https://luis.lu.lv" target="_blank" class="platform-link">Apmeklēt LUIS →</a>
+                    </div>
+
+                    <div class="platform-card">
+                        <h3>Citas noderīgas saites</h3>
+                        <ul>
+                            <li><a href="https://www.lu.lv" target="_blank">LU oficiālā mājaslapa</a> - jaunumi un informācija par universitāti</li>
+                            <li><a href="https://www.biblioteka.lu.lv/" target="_blank">LU Bibliotēka</a> - piekļuve digitālajiem resursiem un grāmatām</li>
+                            <li><a href="https://www.lu.lv/fileadmin/user_upload/LU.LV/www.lu.lv/Dokumenti/Dokumenti_LV/3._STUDIJU_UN_ZINATNES_PROCESU_REGLAMENTEJOSIE_DOKUMENTI/LU_Studiju_programmu_nolikums.pdf" target="_blank">Studiju nolikums</a> - svarīgi noteikumi un prasības</li>
+                            <li><a href="https://www.lu.lv/studijas/studiju-celvedis/akademiskais-kalendars/2024/2025-akademiska-gada-kalendars/" target="_blank">Akadēmiskais kalendārs</a> - studiju norises datumi</li>
+                            <li>Datorzinātņu bakalaura <a href="https://eztf.lu.lv/fileadmin/user_upload/lu_portal/eztf.lu.lv/Lekciju_saraksti_2024_rudens/Datorzinatnes/DN_2025_P_11.pdf" target="_blank">lekciju saraksts</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="digitalie-rikji" class="section">
-            <h2>Digitālie rīki</h2>
+            <div class="section-header">
+                <h2>Digitālie rīki</h2>
+                <span class="arrow">▲</span>
+            </div>
             <div class="content">
-                <p>Šie ir rīki, kas man palīdz izvēlēties ātrāko maršrutu līdz Universitātei. Galvenokārt izmantoju google maps, jo tas parāda brauciena ilgumu, kur ir tuvākais transports, kā uz to nokļūt un precīzu ierašanās laiku.</p>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Google Maps</h3>
+                        <p>Galvenais rīks, kas palīdz izvēlēties ātrāko maršrutu līdz Universitātei. Ar Google Maps varu:</p>
+                        <ul>
+                            <li>Redzēt precīzu brauciena ilgumu</li>
+                            <li>Atrast tuvāko transporta pieturu</li>
+                            <li>Izvēlēties optimālo transporta veidu</li>
+                            <li>Sekot reāllaika transporta kavējumiem</li>
+                        </ul>
+                        <a href="https://maps.google.com" target="_blank" class="tool-link">Atvērt Google Maps →</a>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h3>Laika prognoze</h3>
+                        <p>Laikapstākļu aplikācija (iPhone Weather aplikācija) ir būtiska, lai saprastu, kādu laiku var sagaidīt dienā. Tā man palīdz:</p>
+                        <ul>
+                            <li>Plānot atbilstošu apģērbu</li>
+                            <li>Izvēlēties piemērotu transporta veidu (Reizēm braucu ar riteni)</li>
+                            <li>Paredzēt iespējamās kavēšanās</li>
+                            <li>Pieņemt lēmumu par brauciena laiku</li>
+                        </ul>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>E-studijas aplikācija</h3>
+                        <p>Mobilā e-studiju aplikācija nodrošina piekļuvi mācību materiāliem jebkurā laikā. Ar to varu:</p>
+                        <ul>
+                            <li>Pārbaudīt jaunus uzdevumus</li>
+                            <li>Skatīt mācību materiālus</li>
+                            <li>Sekot līdzi svarīgiem termiņiem</li>
+                            <li>Sazināties ar pasniedzējiem</li>
+                        </ul>
+                        <a href="https://estudijas.lu.lv" target="_blank" class="tool-link">Atvērt e-studijas →</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="iespejas" class="section">
-            <h2>Iespējas</h2>
+            <div class="section-header">
+                <h2>Iespējas</h2>
+                <span class="arrow">▲</span>
+            </div>
             <div class="content">
-                <p>Šeit pastāstu par to, kādas iespējas gan universitātes tiešsaistes platformas, gan digitālie rīki sniedz. Tas ietver vispārēju informāciju laika plānošanā, platformas kas man ir visnoderīgākās un kādas iespējas tās paver.</p>
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <h3>Laika plānošana</h3>
+                        <p>Digitālie rīki un platformas sniedz iespēju efektīvi plānot savu laiku:</p>
+                        <ul>
+                            <li>E-studijas palīdz sekot līdzi uzdevumu termiņiem</li>
+                            <li>Google Maps ļauj precīzi plānot brauciena laiku</li>
+                            <li>Laika prognoze palīdz izvēlēties optimālo maršrutu</li>
+                            <li>LUIS nodrošina pārskatu par eksāmenu grafiku un citu studijām svarīgu informāciju</li>
+                        </ul>
+                    </div>
+
+                    <div class="platform-card">
+                        <h3>Mācību procesa optimizācija</h3>
+                        <p>Universitātes platformas atvieglo mācību procesu:</p>
+                        <ul>
+                            <li>Pieeja mācību materiāliem jebkurā laikā un vietā</li>
+                            <li>Mobilā e-studiju aplikācija ļauj mācīties kamēr esmu ceļā</li>
+                            <li>Digitālie resursi un e-grāmatas pieejamas 24/7</li>
+                        </ul>
+                    </div>
+
+                    <div class="platform-card">
+                        <h3>Mobilitāte un transporta izvēles</h3>
+                        <p>Digitālie rīki paver iespējas efektīvai mobilitātei:</p>
+                        <ul>
+                            <li>Reāllaika informācija par transporta kustību</li>
+                            <li>Alternatīvu maršrutu meklēšana</li>
+                            <li>Transporta kavējumu prognozēšana</li>
+                            <li>Optimāla brauciena laika izvēle</li>
+                        </ul>
+                    </div>
+
+                    <div class="platform-card">
+                        <h3>Komunikācija un sadarbība</h3>
+                        <p>Platformas veicina efektīvu komunikāciju:</p>
+                        <ul>
+                            <li>Grupu projektu organizēšana</li>
+                            <li>Diskusiju forumi ar kursabiedriem</li>
+                            <li>Ātra saziņa ar pasniedzējiem</li>
+                            <li>Informācijas apmaiņa ar kursabiedriem</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <div id="fullscreen-overlay" onclick="closeFullscreen()">
+        <img id="fullscreen-image" src="" alt="Fullscreen view">
+    </div>
 
     <script src="script.js"></script>
 </body>
